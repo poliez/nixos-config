@@ -7,6 +7,14 @@
   programs = {
     adb.enable = true;
     java.enable = true;
+    tmux = {
+      enable = true;
+      clock24 = true;
+      extraTmuxConf = ''
+
+      '';
+    };
+
     zsh = {
       enable = true;
       ohMyZsh = {
@@ -45,7 +53,9 @@
     p7zip
     ntfs3g # enable ntfs (FUSE driver with write support)
     exfat
-    tmux
+
+    # tmux Plugins
+    unstable.tmuxPlugins.vim-tmux-navigator
 
     # GUI serious apps
     google-chrome

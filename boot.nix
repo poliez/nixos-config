@@ -2,7 +2,7 @@
 {
   # Use the systemd-boot EFI boot loader.
   boot = {
-    kernelPackages = pkgs.linuxPackages_5_1;
+    kernelPackages = pkgs.linuxPackages_5_2;
 
     kernelParams = [
        # many parameters are from : https://github.com/JackHack96/dell-xps-9570-ubuntu-respin#manual-respin-procedure

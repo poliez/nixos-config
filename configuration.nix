@@ -32,18 +32,16 @@
     fonts = with pkgs; [
       corefonts # Microsoft free fonts
       fira-code
-      inconsolata  # monospaced
       google-fonts
       hack-font
       hasklig
-      nerdfonts
       noto-fonts
     ];
     
-    fontconfig.defaultFonts.monospace = [ "Ubuntu" ];
+    fontconfig.defaultFonts.monospace = [ "Fira Code" ];
   };
 
-  environment.variables.EDITOR = "vim";
+  environment.variables.EDITOR = "nvim";
 
   system.stateVersion = "19.03"; # Did you read the comment?
 

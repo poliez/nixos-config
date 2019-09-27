@@ -32,6 +32,7 @@
       };
 
       desktopManager = {
+        xterm.enable = false;
         gnome3.enable = true;
         default = "gnome3";
       };

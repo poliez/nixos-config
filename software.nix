@@ -7,6 +7,24 @@
   programs = {
     adb.enable = true;
     java.enable = true;
+    zsh = {
+      enable = true;
+      ohMyZsh = {
+        enable = true;
+        plugins = [
+          "git"
+          "sudo"
+          "adb"
+          "battery"
+          "git-flow"
+          "scala"
+          "sbt"
+          "themes"
+          "tmux"
+          "command-not-found"
+        ];
+      };
+    };
   };
  
   environment.gnome3.excludePackages = pkgs.gnome3.optionalPackages;
@@ -27,6 +45,7 @@
     p7zip
     ntfs3g # enable ntfs (FUSE driver with write support)
     exfat
+    tmux
 
     # GUI serious apps
     google-chrome
@@ -80,7 +99,6 @@
     coursier
     gradle
     ammonite
-    gitter
     nodejs-11_x
     yarn
     git
@@ -104,6 +122,7 @@
           
           au BufRead,BufNewFile *.sbt set filetype=scala
 
+          set shell=/bin/sh
 
           " BELOW OPTIONS ARE FROM `https://scalameta.org/metals/docs/editors/vim.html`
           " Smaller updatetime for CursorHold & CursorHoldI
@@ -120,14 +139,14 @@
           set nowritebackup
           
           " Better display for messages
-          set cmdheight=2
+          set cmdheight=3
           
           " Use <c-space> for trigger completion.
-          inoremap <silent><expr> <C-Space> coc#refresh()
+          inoremap <silent><expr> <c-space> coc#refresh()
           
-          " Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
+          " Use <Tab> for confirm completion, `<C-g>u` means break undo chain at current position.
           " Coc only does snippet and additional edit on confirm.
-          inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+          inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
           
           " Use `[c` and `]c` for navigate diagnostics
           nmap <silent> [c <Plug>(coc-diagnostic-prev)
@@ -142,8 +161,8 @@
           " Remap for do codeAction of current line
           nmap <leader>ac <Plug>(coc-codeaction)
           
-          " Remap for do action format
-          nnoremap <silent> F :call CocAction('format')<CR>
+          " Remap for do action format (removed due to format on save)
+          " nnoremap <silent> F :call CocAction('format')<CR>
           
           " Use K for show documentation in preview window
           nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -174,13 +193,18 @@
           nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
           " Resume latest coc list
           nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+          " From here just remapping to show metals some love
+          command ImportBuild call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-import' })
+          command RunDoctor call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'doctor-run' })
+          command ConnectBloop call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-connect' })
         '';
 
         plug.plugins = with pkgs.unstable.vimPlugins; [
           vim-scala
 	  vim-javascript
 	  vim-nix
-	  coc-pairs
+          auto-pairs
 	  coc-html
 	  coc-css
 	  coc-python

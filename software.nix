@@ -53,6 +53,8 @@
     p7zip
     ntfs3g # enable ntfs (FUSE driver with write support)
     exfat
+    termite
+    thefuck
 
     # tmux Plugins
     unstable.tmuxPlugins.vim-tmux-navigator
@@ -131,8 +133,6 @@
           inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
           
           au BufRead,BufNewFile *.sbt set filetype=scala
-
-          set shell=/bin/sh
 
           " BELOW OPTIONS ARE FROM `https://scalameta.org/metals/docs/editors/vim.html`
           " Smaller updatetime for CursorHold & CursorHoldI

@@ -36,6 +36,7 @@
       hack-font
       hasklig
       noto-fonts
+      powerline-fonts
     ];
     
     fontconfig.defaultFonts.monospace = [ "Fira Code" ];

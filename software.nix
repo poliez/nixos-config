@@ -54,6 +54,7 @@
     ntfs3g # enable ntfs (FUSE driver with write support)
     exfat
     termite
+    unstable.home-manager
     thefuck
 
     # tmux Plugins

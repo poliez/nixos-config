@@ -56,13 +56,14 @@
     termite
     unstable.home-manager
     thefuck
+    e2fsprogs # Required by GParted to read ext4 fs details
 
     # tmux Plugins
     unstable.tmuxPlugins.vim-tmux-navigator
 
     # GUI serious apps
     google-chrome
-    gparted
+    unstable.gparted
     thunderbird
     jetbrains.idea-community
     evince
@@ -134,6 +135,9 @@
           inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
           
           au BufRead,BufNewFile *.sbt set filetype=scala
+
+          " Improve editing speed
+          inoremap jj <Es>
 
           " BELOW OPTIONS ARE FROM `https://scalameta.org/metals/docs/editors/vim.html`
           " Smaller updatetime for CursorHold & CursorHoldI

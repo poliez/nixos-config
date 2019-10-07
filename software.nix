@@ -56,7 +56,12 @@
     termite
     unstable.home-manager
     thefuck
-    e2fsprogs # Required by GParted to read ext4 fs details
+    unstable.e2fsprogs # Required by GParted to read ext4 fs details
+    os-prober # Enables automatic discovery of boot partitions
+    grub2
+    grub2_efi
+    nixos-grub2-theme
+    udisks
 
     # tmux Plugins
     unstable.tmuxPlugins.vim-tmux-navigator

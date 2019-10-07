@@ -36,5 +36,14 @@
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     blacklistedKernelModules = [ "nouveau" ]; # blacklist the opensource nvidia driver that does not work well and might conflict with proprietary nvidia driver
+
+    loader.grub = {
+      enable = true;
+      version = 2;
+      devices = ["nodev"];
+      useOSProber = true;
+      efiSupport = true;
+      copyKernels = true;
+    };
   };
 }

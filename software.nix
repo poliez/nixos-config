@@ -7,13 +7,6 @@
   programs = {
     adb.enable = true;
     java.enable = true;
-    tmux = {
-      enable = true;
-      clock24 = true;
-      extraTmuxConf = ''
-
-      '';
-    };
 
     zsh = {
       enable = true;
@@ -28,7 +21,6 @@
           "scala"
           "sbt"
           "themes"
-          "tmux"
           "command-not-found"
         ];
       };
@@ -62,9 +54,7 @@
     grub2_efi
     nixos-grub2-theme
     udisks
-
-    # tmux Plugins
-    unstable.tmuxPlugins.vim-tmux-navigator
+    unstable.kitty
 
     # GUI serious apps
     google-chrome
@@ -142,7 +132,14 @@
           au BufRead,BufNewFile *.sbt set filetype=scala
 
           " Improve editing speed
-          inoremap jj <Es>
+          inoremap kj <Esc>
+          inoremap jk <Esc>
+          
+          " Easier split navigations
+          nnoremap <C-J> <C-W><C-J>
+          nnoremap <C-K> <C-W><C-K>
+          nnoremap <C-L> <C-W><C-L>
+          nnoremap <C-H> <C-W><C-H>
 
           " BELOW OPTIONS ARE FROM `https://scalameta.org/metals/docs/editors/vim.html`
           " Smaller updatetime for CursorHold & CursorHoldI

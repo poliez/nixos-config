@@ -46,19 +46,19 @@
     ntfs3g # enable ntfs (FUSE driver with write support)
     exfat
     termite
-    unstable.home-manager
+    home-manager
     thefuck
-    unstable.e2fsprogs # Required by GParted to read ext4 fs details
+    e2fsprogs # Required by GParted to read ext4 fs details
     os-prober # Enables automatic discovery of boot partitions
     grub2
     grub2_efi
     nixos-grub2-theme
     udisks
-    unstable.kitty
+    kitty
 
     # GUI serious apps
     google-chrome
-    unstable.gparted
+    gparted
     thunderbird
     jetbrains.idea-community
     evince
@@ -111,10 +111,10 @@
     nodejs-11_x
     yarn
     git
-    unstable.vscode
+    vscode
 
     # Neovim 
-    (unstable.neovim.override {
+    (neovim.override {
       configure = {
         customRC = ''
           set number
@@ -217,7 +217,7 @@
           command ConnectBloop call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-connect' })
         '';
 
-        plug.plugins = with pkgs.unstable.vimPlugins; [
+        plug.plugins = with pkgs.vimPlugins; [
           vim-scala
 	  vim-javascript
 	  vim-nix

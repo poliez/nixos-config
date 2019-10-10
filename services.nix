@@ -17,7 +17,8 @@
       gnome2.GConf 
     ];
 
-    gnome3.gnome-documents.enable = false;   
+    gnome3.core-utilities.enable = false;
+    gnome3.games.enable = false;
  
     xserver = {
       enable = true;
@@ -37,10 +38,6 @@
         default = "gnome3";
       };
 
-      windowManager = {
-        xmonad.enable = true;
-        default = "xmonad";
-      };
     };
   };
 }

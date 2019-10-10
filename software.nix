@@ -27,8 +27,6 @@
     };
   };
  
-  environment.gnome3.excludePackages = pkgs.gnome3.optionalPackages;
-
   environment.systemPackages = with pkgs; [ 
 
     # basic command line utilities
@@ -45,7 +43,6 @@
     p7zip
     ntfs3g # enable ntfs (FUSE driver with write support)
     exfat
-    termite
     home-manager
     thefuck
     e2fsprogs # Required by GParted to read ext4 fs details
@@ -73,30 +70,24 @@
     # Gnome 3
     gnome3.eog
     gnome3.nautilus
-    gnome3.vino
     gnome3.gnome-bluetooth
     gnome3.gnome-calculator
     gnome3.gnome-font-viewer
     gnome3.gnome-screenshot
     gnome3.gnome-system-monitor
     gnome3.simple-scan
-    gnome3.gnome-terminal
     gnome3.file-roller
-    gnome3.gnome-clocks
     gnome3.gnome-tweaks
     gnome3.nautilus-sendto
     gnome3.gnome-logs
-    gnome3.gnome-characters
     gnome3.gnome-nettool
 
     # Gnome Extensions
     gnomeExtensions.dash-to-dock
     gnomeExtensions.dash-to-panel
-    gnomeExtensions.battery-status
     gnomeExtensions.caffeine
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.icon-hider
-    gnomeExtensions.no-title-bar
     gnomeExtensions.topicons-plus
     gnomeExtensions.gsconnect
     gnomeExtensions.impatience
@@ -108,7 +99,7 @@
     coursier
     gradle
     ammonite
-    nodejs-11_x
+    nodejs-12_x
     yarn
     git
     vscode

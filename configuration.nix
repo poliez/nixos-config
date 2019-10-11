@@ -43,6 +43,7 @@
   };
 
   environment.variables.EDITOR = "nvim";
+  environment.variables.TERMINAL = "kitty";
 
   system.stateVersion = "19.03"; # Did you read the comment?
 

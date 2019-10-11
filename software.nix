@@ -6,7 +6,10 @@
 
   programs = {
     adb.enable = true;
-    java.enable = true;
+    java = {
+      enable = true;
+      package = pkgs.adoptopenjdk-bin;
+    };
 
     zsh = {
       enable = true;
@@ -57,7 +60,6 @@
     google-chrome
     gparted
     thunderbird
-    jetbrains.idea-community
     evince
     transmission
     vlc
@@ -94,7 +96,9 @@
     gnomeExtensions.system-monitor
 
     # Software Development
-    sbt
+    (sbt.override {
+      jre = pkgs.adoptopenjdk-jre-bin;
+    })
     maven
     coursier
     gradle
@@ -103,6 +107,8 @@
     yarn
     git
     vscode
+    jetbrains.idea-community
+    graalvm8
 
     # Neovim 
     (neovim.override {

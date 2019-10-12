@@ -220,6 +220,7 @@
 	  vim-nix
           auto-pairs
 	  coc-html
+          coc-java
 	  coc-css
 	  coc-python
           coc-nvim            # LSP

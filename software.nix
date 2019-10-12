@@ -138,6 +138,14 @@
           nnoremap <C-L> <C-W><C-L>
           nnoremap <C-H> <C-W><C-H>
 
+          " Move lines around
+          nnoremap <A-j> :m .+1<CR>==
+          nnoremap <A-k> :m .-2<CR>==
+          inoremap <A-j> <Esc>:m .+1<CR>==gi
+          inoremap <A-k> <Esc>:m .-2<CR>==gi
+          vnoremap <A-j> :m '>+1<CR>gv=gv
+          vnoremap <A-k> :m '<-2<CR>gv=gv
+
           " BELOW OPTIONS ARE FROM `https://scalameta.org/metals/docs/editors/vim.html`
           " Smaller updatetime for CursorHold & CursorHoldI
           set updatetime=300
@@ -218,11 +226,7 @@
           vim-scala
 	  vim-javascript
 	  vim-nix
-          auto-pairs
-	  coc-html
-          coc-java
-	  coc-css
-	  coc-python
+          rainbow
           coc-nvim            # LSP
           vim-one             # Sw4g
           nerdtree            # Tree File View

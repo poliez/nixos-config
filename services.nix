@@ -27,9 +27,8 @@
       videoDrivers = [ "intel" ];
       libinput.enable = true;
 
-      displayManager.gdm = {
+      displayManager.lightdm = {
         enable = true;
-        wayland = false;
       };
 
       desktopManager = {

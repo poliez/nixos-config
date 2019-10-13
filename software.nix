@@ -101,8 +101,6 @@
     nodejs-12_x
     yarn
     git
-    vscode
-    jetbrains.idea-community
 
     # Neovim 
     (neovim.override {

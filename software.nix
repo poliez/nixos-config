@@ -6,10 +6,7 @@
 
   programs = {
     adb.enable = true;
-    java = {
-      enable = true;
-      package = pkgs.adoptopenjdk-bin;
-    };
+    java.enable = true;
 
     zsh = {
       enable = true;
@@ -96,9 +93,7 @@
     gnomeExtensions.system-monitor
 
     # Software Development
-    (sbt.override {
-      jre = pkgs.adoptopenjdk-jre-bin;
-    })
+    sbt
     maven
     coursier
     gradle
@@ -108,7 +103,6 @@
     git
     vscode
     jetbrains.idea-community
-    graalvm8
 
     # Neovim 
     (neovim.override {

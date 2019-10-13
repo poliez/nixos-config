@@ -14,6 +14,8 @@ in
         unstable = import unstableTarball {
           config = config.nixpkgs.config;
         };
+        jdk = pkgs.adoptopenjdk-bin;
+        jre = pkgs.adoptopenjdk-jre-bin;
       };
     };
   };

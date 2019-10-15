@@ -120,6 +120,12 @@
           
           au BufRead,BufNewFile *.sbt set filetype=scala
 
+          " For God's sake
+          nnoremap <Esc> <Esc> :noh <CR><Left>
+
+          " Format correctly on <cr> when inside parens
+          inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
           " Improve editing speed
           inoremap kj <Esc>
           inoremap jk <Esc>

@@ -39,10 +39,15 @@
       powerline-fonts
     ];
     
-    fontconfig.defaultFonts.monospace = [ "Fira Code" ];
+    fontconfig.defaultFonts = {
+      serif = [ "Ubuntu Condensed" "Ubuntu" ];
+      sansSerif = [ "Ubuntu" ];
+      monospace = [ "Fira Code" ];
+    };
   };
 
   environment.variables.EDITOR = "nvim";
+  environment.variables.VISUAL = "nvim";
   environment.variables.TERMINAL = "kitty";
 
   system.stateVersion = "19.03"; # Did you read the comment?

@@ -34,7 +34,19 @@
       desktopManager = {
         xterm.enable = false;
         gnome3.enable = true;
-        default = "gnome3";
+        default = "none";
+      };
+      
+      windowManager = {
+        i3 = {
+          enable = true;
+          package = pkgs.i3-gaps;
+          extraPackages = with pkgs; [
+            dmenu       # Application Launcher
+            i3status    # Status Bar
+            i3lock      # i3 Screen Locker
+          ];
+        };
       };
 
     };

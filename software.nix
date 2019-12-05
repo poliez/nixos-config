@@ -102,8 +102,22 @@
     yarn
     git
 
+    # File Managers
+    mc
+    ranger
+    lf
+    vifm
+
+    # i3
+    lxappearance
+
+    (polybar.override {
+      i3GapsSupport = true;
+      pulseSupport = true;
+    })
+
     # Neovim 
-    (neovim.override {
+    (unstable.neovim.override {
       configure = {
         customRC = ''
           set number
@@ -159,7 +173,7 @@
           set nowritebackup
           
           " Better display for messages
-          set cmdheight=3
+          set cmdheight=2
           
           " Use <c-space> for trigger completion.
           inoremap <silent><expr> <c-space> coc#refresh()
@@ -182,7 +196,7 @@
           nmap <leader>ac <Plug>(coc-codeaction)
           
           " Remap for do action format (removed due to format on save)
-          " nnoremap <silent> F :call CocAction('format')<CR>
+          " nnoremap <silent> F :call CocActionAsync('format')<CR>
           
           " Use K for show documentation in preview window
           nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -191,7 +205,7 @@
             if &filetype == 'vim'
               execute 'h '.expand('<cword>')
             else
-              call CocAction('doHover')
+              call CocActionAsync('doHover')
             endif
           endfunction
           

@@ -52,6 +52,7 @@
     nixos-grub2-theme
     udisks
     kitty
+    iw
 
     # GUI serious apps
     google-chrome
@@ -109,7 +110,8 @@
     vifm
 
     # i3
-    lxappearance
+    lxappearance # UI customization
+    pywal # colorscheme generator
 
     (polybar.override {
       i3GapsSupport = true;

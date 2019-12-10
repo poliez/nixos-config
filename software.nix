@@ -53,6 +53,8 @@
     udisks
     kitty
     iw
+    xorg.xbacklight
+    playerctl
 
     # GUI serious apps
     google-chrome

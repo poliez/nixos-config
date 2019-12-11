@@ -52,7 +52,6 @@
     nixos-grub2-theme
     udisks
     kitty
-    iw
     xorg.xbacklight
     playerctl
 

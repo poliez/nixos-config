@@ -124,11 +124,13 @@
       configure = {
         customRC = ''
           set number
-          set termguicolors 
+          " set termguicolors " Can't use this with wal-vim
+          " set background=dark
 
-          set background=dark
-          colorscheme one
-          let g:airline_theme = 'one'
+          colorscheme wal
+          let g:airline_theme = 'wal'
+
+          let g:rainbow_active = 1
 
           nmap <C-n> :NERDTreeToggle<CR>
 
@@ -241,6 +243,7 @@
           vim-scala
 	  vim-javascript
 	  vim-nix
+          wal-vim             # Hyper Sw4g
           rainbow
           coc-nvim            # LSP
           vim-one             # Sw4g

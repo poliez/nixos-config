@@ -104,10 +104,16 @@
     ammonite
     nodejs-12_x
     yarn
+    ruby
+    gcc
     git
+    mitscheme
+    racket
     elmPackages.elm
     unstable.elmPackages.elm-language-server
     unstable.elmPackages.elm-test
+    sublime-merge
+    gitkraken
 
     # File Managers
     mc
@@ -249,13 +255,13 @@
         plug.plugins = with pkgs.vimPlugins; [
           elm-vim
           (pkgs.vimUtils.buildVimPluginFrom2Nix {
-            pname = "vim-elm-syntax";
-            version = "2019-11-28";
-            src = pkgs.fetchFromGitHub {
-              owner = "andys8";
-              repo = "vim-elm-syntax";
-              rev = "7ed55d9bc2c0cfd023d7cc6541634bcbf36430b5";
-              sha256 = "1kq7qcw9l41q646a2ilwy94lj1qz9as14aqfmzkbi938yij18zpx";
+            pname = "vim-racket";
+            version = "2019-11-10";
+            src = fetchFromGitHub {
+              owner = "wlangstroth";
+              repo = "vim-racket";
+              rev = "55aba05bcaa1f8efa977e92ebfcef98ab84ed616";
+              sha256 = "1zfyl5x85fapy9yl26b67jj630krsyg62p264hdjvb1qjmvklr67";
             };
           })
           vim-scala
@@ -270,7 +276,7 @@
           vim-easymotion      # Code navigation 
           vim-airline         # Sw4g status bar
           vim-airline-themes  # Sw4g status bar themes
-        ];
+        ] ++ [ pkgs.unstable.vimPlugins.vim-elm-syntax];
       };
     })
   ];

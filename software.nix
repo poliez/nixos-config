@@ -109,6 +109,7 @@
     yarn
     ruby
     gcc
+    gnumake
     git
     mitscheme
     racket
@@ -117,6 +118,7 @@
     unstable.elmPackages.elm-test
     sublime-merge
     gitkraken
+    jekyll
 
     # File Managers
     mc

@@ -56,6 +56,8 @@
     playerctl
     flameshot
     fim
+    unstable.wineWowPackages.staging
+    (winetricks.override { wine = unstable.wineWowPackages.staging; })
 
     # GUI serious apps
     google-chrome
@@ -65,6 +67,7 @@
     transmission
     vlc
     discord
+    steam
 
     # Themes
     equilux-theme

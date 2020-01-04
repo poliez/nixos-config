@@ -20,6 +20,11 @@
       package = pkgs.pulseaudioFull;
     };
 
+    opengl = {
+      driSupport32Bit = true;
+      extraPackages32 = with pkgs.pkgsi686Linux; [ libva ];
+    };
+
     bluetooth.enable = true;
   };
 }

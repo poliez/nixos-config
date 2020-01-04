@@ -37,6 +37,8 @@
       hasklig
       noto-fonts
       powerline-fonts
+      siji
+      unifont
     ];
     
     fontconfig.defaultFonts = {

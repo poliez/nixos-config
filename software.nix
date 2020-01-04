@@ -54,6 +54,8 @@
     kitty
     xorg.xbacklight
     playerctl
+    flameshot
+    fim
 
     # GUI serious apps
     google-chrome
@@ -113,9 +115,11 @@
     lf
     vifm
 
-    # i3
-    lxappearance # UI customization
-    pywal # colorscheme generator
+    # Sw4g
+    lxappearance  # UI customization
+    pywal         # colorscheme generator
+    compton       # Window compositor
+    neofetch      # So you can make some of the cool screenshot you see on r/unixporn
 
     (polybar.override {
       i3GapsSupport = true;
@@ -127,11 +131,11 @@
       configure = {
         customRC = ''
           set number
-          " set termguicolors " Can't use this with wal-vim
-          " set background=dark
+          set termguicolors " Can't use this with wal-vim
+          set background=dark
 
-          colorscheme wal
-          let g:airline_theme = 'wal'
+          colorscheme one
+          let g:airline_theme = 'one'
 
           let g:rainbow_active = 1
 

@@ -107,18 +107,14 @@
     ammonite
     nodejs-12_x
     yarn
-    ruby
     gcc
     gnumake
     git
-    mitscheme
     racket
     elmPackages.elm
     unstable.elmPackages.elm-language-server
     unstable.elmPackages.elm-test
     sublime-merge
-    gitkraken
-    jekyll
 
     # File Managers
     mc

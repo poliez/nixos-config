@@ -115,6 +115,7 @@
     unstable.elmPackages.elm-language-server
     unstable.elmPackages.elm-test
     sublime-merge
+    h2
 
     # File Managers
     mc
